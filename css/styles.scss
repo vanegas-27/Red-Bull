@@ -1,0 +1,53 @@
+//variables de style
+$colorPrimary : #001c39;
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 62.5%;
+    list-style: none;
+    color: white;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+
+body{
+    background-color:$colorPrimary;
+}
+
+header{
+    align-items: center;
+    padding-top: 30px;
+
+    ul{
+        padding: 0px;
+    }
+
+}
+
+
+.container-aside{
+    padding: 0px;
+
+}
+
+
+.container-main{
+    border: 1px solid black;
+
+}
+.container-aside{
+    border: 1px solid red;
+}
+.container-footer{
+    border: 1px solid blue;
+}
+
+footer{
+    background-color: red;
+}
