@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Bull| los mejores noticias de deporte mundialmente</title>
+    <title>Red Bull| Te da alas  los mejores en noticias de deporte mundialmente, fresstyle, autos, bebidas, ropa </title>
+
+    <!-- iconos de la pagina oficial de Red Bull-->
+    <link rel="icon" sizes="16x16" href="https://img.redbull.com/images/c_scale,w_16/favicons/www.redbull.com/favicon/favicon-16.png">
+    <link rel="icon" sizes="32x32" href="https://img.redbull.com/images/c_scale,w_32/favicons/www.redbull.com/favicon/favicon-32.png">
+    <link rel="icon" sizes="96x96" href="https://img.redbull.com/images/c_scale,w_96/favicons/www.redbull.com/app-icon/favicon-96.png">
 
     <!-- link de jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -18,7 +23,7 @@
     <meta name="keywords"
         content="Estimulante, Taurina, Cafeína Vitaminas, Refrescante, Deportes, extremos, Patrocinio, Alas, Sabor, Rendimiento, Estilo de vida, activo Marca de bebidas, Marketing, Aventura, Innovación, Fórmula 1, Música, Desempeño, físico">
 
-    <!--para decirle al los robots que la pagina sea mas visible al usuario-->
+    <!--para decirle al los robots que la pagina sea mas visible al usuario y pueda ser indexada-->
     <meta name="robots" content="index,follow">
 
     <!--author-->
@@ -44,6 +49,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
 
+    <!--fuente de textos-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400&display=swap" rel="stylesheet">
 
     <!--estilos propios-->
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
@@ -54,14 +63,14 @@
 <body class="container-fluid">
 
     <header class="row container-fluid">
-        <figure class="col-md-3">
-            <img src="../assets/icons/redbullcom-logo.svg" alt="Logo Red Bull" class="img-fluid">
+        <figure class="col-md-3" >
+            <img src="../assets/icons/redbullcom-logo.svg" type="img/svg" alt="Logo Red Bull" class="img-fluid" loading="lazy">
         </figure>
         <figure class="col-md-9">
-            <img src="../assets/images/bannerPrincipal.webp" alt="banner promocional" class="img-fluid">
+            <img src="../assets/images/bannerPrincipal.webp" alt="banner promocional" type="img/webp" class="img-fluid" loading="lazy">
         </figure>
         <nav class="container-fluid">
-            <ul class="d-flex justify-content-between">
+            <ul class="d-flex justify-content-between col-md-12">
                 <li>Home</li>
                 <li>Fashion</li>
                 <li>Politics</li>
@@ -74,107 +83,343 @@
         </nav>
     </header>
 
-    <div class="row container-fluid">
+    <div class="row container-fluid container_main_aside">
 
-        <main class="container-main col-md-9">
-            <section>
-                <img src="../assets/images/batalla.avif" alt="" class="img-fluid">
-                <img src="../assets/images/batalla2.avif" alt="" class="img-fluid">
-                <img src="../assets/images/batalla3.avif" alt="" class="img-fluid">
-            </section>
-            <div>
-                <i class="bi bi-caret-left"></i>
-                <i class="bi bi-caret-right"></i>
-            </div>
-            <section>
-                <article>
-                    <div>
-                        <span>19 oct 2023</span>
-                        <img src="../assets/images/mainImg2.avif" alt="" class="img-fluid">
-                        <h3>News headiline will come here for thw feactude news section</h3>
-                    </div>
-                    <p>couple of lines reload to News will...<a href="#">Read More</a></p>
-                    <div>
-                        <i class="bi bi-caret-left"></i>
-                        <i class="bi bi-caret-right"></i>
-                    </div>
-                </article>
-                <article>
-                    <figure>
-                        <img src="../assets/images/publico.jpg" alt="" class="img-fluid" loading="lazy">
-                    </figure>
-                    <div>
-                        <h3>News headiline will come here for thw feactude news section</h3>
-                        <p>couple of lines reload to News will... <a href="#">Read More</a></p>
-                        <span>19 oct 2023</span>
-                    </div>
-                </article>
-                <article>
-                    <figure>
-                        <img src="../assets/images/publico.jpg" alt="" class="img-fluid" loading="lazy">
-                    </figure>
-                    <div>
-                        <h3>News headiline will come here for thw feactude news section</h3>
-                        <p>couple of lines reload to News will... <a href="#">Read More</a></p>
-                        <span>19 oct 2023</span>
-                    </div>
-                </article>
+        <main class="container_main col-md-8">
+
+            <section class="container_main_img_banner">
+                <img src="../assets/images/batalla.avif" type="img/avif" alt="esenarios de nuestros artistas" class="img-fluid" loading="lazy">
+                <div class="arrows">
+                    <i class="bi bi-caret-left"></i>
+                    <i class="bi bi-caret-right"></i>
+                </div>
             </section>
 
-            <section>
-                <ul>
-                    <li>Fashion</li>
-                    <li>Men's</li>
-                    <li>Women's</li>
-                    <li>Kid's</li>
-                    <li><a href="#">VieW All</a></li>
-                </ul>
-                <div>
-                    <article>
-                        <div>
-                            <span>19 oct 2023</span>
-                            <img src="../assets/images/mainImg2.avif" alt="" class="img-fluid">
-                            <h3>News headiline will come here for thw feactude news section</h3>
-                        </div>
+            <section class="row">
+
+              <article class="col-md-6 container_main_notice">
+                    <div>
+                        <span>19 oct 2023</span>
+                        <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                        <h3>News headiline will come here for thw feactude news section</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
                         <p>couple of lines reload to News will...<a href="#">Read More</a></p>
+                        <div class="d-flex justify-content-between align-items-center ">
+                            <i class="bi bi-caret-left m-1"></i>
+                            <i class="bi bi-caret-right m-1"></i>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="col-md-6 container_main_notice_info">
+                    <article class="d-flex">
+                       <figure>
+                            <img src="../assets/images/imgAside1.avif" alt="" type="img/jpg" class="img-fluid" loading="lazy">
+                        </figure>
+                        <div class="m-1">
+                            <h3>News headiline will come here for thw feactude news section</h3>
+                            <p>couple of lines reload to News will... <a href="#">Read More</a></p>
+                            <span>19 oct 2023</span>
+                        </div>
                     </article>
-                    <article>
-                        <div>
-                            <span>19 oct 2023</span>
-                            <img src="../assets/images/mainImg2.avif" alt="" class="img-fluid">
+
+                    <article class="d-flex">
+                     <figure>
+                            <img src="../assets/images/imgAside2.avif" type="img/jpg" alt="" class="img-fluid" loading="lazy">
+                        </figure>
+                        <div class="m-1">
                             <h3>News headiline will come here for thw feactude news section</h3>
+                            <p>couple of lines reload to News will... <a href="#">Read More</a></p>
+                            <span>19 oct 2023</span>
                         </div>
-                        <p>couple of lines reload to News will...<a href="#">Read More</a></p>
                     </article>
-                    <article>
-                        <div>
-                            <span>19 oct 2023</span>
-                            <img src="../assets/images/mainImg2.avif" alt="" class="img-fluid">
+
+                    <article class="d-flex">
+                        <figure>
+                            <img src="../assets/images/imgAside3.avif" type="img/jpg" alt="" class="img-fluid" loading="lazy">
+                        </figure>
+                        <div class="m-1">
                             <h3>News headiline will come here for thw feactude news section</h3>
+                            <p>couple of lines reload to News will... <a href="#">Read More</a></p>
+                            <span>19 oct 2023</span>
                         </div>
-                        <p>couple of lines reload to News will...<a href="#">Read More</a></p>
                     </article>
                 </div>
+
+            </section>
+
+            <section class="container_main_category">
+
+                <article>
+                    <ul class="justify-content-between col-12">
+                        <li>Fashion</li>
+                        <li>Men's</li>
+                        <li>Women's</li>
+                        <li>Kid's</li>
+                        <li><a href="#">VieW All</a></li>
+                    </ul>
+
+                    <div class="row mb-3">
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article>
+                    <ul class="justify-content-between col-12">
+                        <li>Fashion</li>
+                        <li>Men's</li>
+                        <li>Women's</li>
+                        <li>Kid's</li>
+                        <li><a href="#">VieW All</a></li>
+                    </ul>
+
+                    <div class="row mb-3">
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article>
+                    <ul class="justify-content-between col-12">
+                        <li>Fashion</li>
+                        <li>Men's</li>
+                        <li>Women's</li>
+                        <li>Kid's</li>
+                        <li><a href="#">VieW All</a></li>
+                    </ul>
+
+                    <div class="row mb-3">
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article>
+                    <ul class="justify-content-between col-12">
+                        <li>Fashion</li>
+                        <li>Men's</li>
+                        <li>Women's</li>
+                        <li>Kid's</li>
+                        <li><a href="#">VieW All</a></li>
+                    </ul>
+
+                    <div class="row mb-3">
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article>
+                    <ul class="justify-content-between col-12">
+                        <li>Fashion</li>
+                        <li>Men's</li>
+                        <li>Women's</li>
+                        <li>Kid's</li>
+                        <li><a href="#">VieW All</a></li>
+                    </ul>
+
+                    <div class="row mb-3">
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article>
+                    <ul class="justify-content-between col-12">
+                        <li>Fashion</li>
+                        <li>Men's</li>
+                        <li>Women's</li>
+                        <li>Kid's</li>
+                        <li><a href="#">VieW All</a></li>
+                    </ul>
+
+                    <div class="row mb-3">
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
+                            <div>
+                                <span>19 oct 2023</span>
+                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
+                                <h3>News headiline will come here section</h3>
+                            </div>
+                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
+                        </div>
+
+                    </div>
+                </article>
+
             </section>
         </main>
 
-        <aside class="container-aside col-md-3">
-            <section class="container-aside-img">
-                <img src="../assets/images/imgAside1.avif" alt="" class="img-fluid">
-                <img src="../assets/images/imgAside2.avif" alt="" class="img-fluid">
-                <img src="../assets/images/imgAside3.avif" alt="" class="img-fluid">
+        <aside class="container_aside col-md-4">
+
+            <section class="container_aside_img">
+                <img src="../assets/images/imgAside1.avif" alt="" class="img-fluid" loading="lazy">
+                <img src="../assets/images/imgAside2.avif" alt="" class="img-fluid" loading="lazy">
+                <img src="../assets/images/imgAside3.avif" alt="" class="img-fluid" loading="lazy">
             </section>
+
             <section>
                 <h3>Our Social Media</h3>
-                <div>
-                    <ul>
+                <span></span>
+                <div class="d-flex container_aside_redes justify-content-between">
+                    <ul class="m-1">
                         <li><i class="bi bi-facebook"></i> Facebook</li>
                         <li><i class="bi bi-twitter"></i> Twitter</li>
                         <li><i class="bi bi-youtube"></i> Youtube</li>
                         <li><i class="bi bi-instagram"></i> Instragram</li>
                         <li><i class="bi bi-pinterest"></i> Pinterst</li>
                     </ul>
-                    <ul>
+                    <ul class="m-1">
                         <li>31k follower</li>
                         <li>31k follower</li>
                         <li>31k follower</li>
@@ -183,132 +428,158 @@
                     </ul>
                 </div>
             </section>
+
             <figure>
-                <img src="../assets/images/imgAsidemen.avif" alt="" class="img-fluid">
+                <img src="../assets/images/imgAsidemen.avif" alt="" class="img-fluid" loading="lazy">
             </figure>
+
             <section>
-                <h2>trending</h2>
-                <article>
+                <ul class="ulAside">
+                    <li class="liAside">Trending</li>
+                </ul>
+                <article class="mb-3">
                     <figure>
-                        <img src="../assets/images/asideArtista1.avif" alt="" class="img-fluid">
+                        <img src="../assets/images/asideArtista1.avif" alt="" class="img-fluid" loading="lazy">
                     </figure>
                     <h4>News headiline will come here</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit... <a href="#">Read More</a></p>
+                    <p>Lorem ipsum dolor sit, amet consectetur elit... <a href="#">Read More</a></p>
                 </article>
-                <article>
+                <article class="mb-3">
                     <figure>
-                        <img src="../assets/images/asideArtista2.avif" alt="" class="img-fluid">
+                        <img src="../assets/images/asideArtista2.avif" alt="" class="img-fluid" loading="lazy">
                     </figure>
                     <h4>News headiline will come here</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit... <a href="#">Read More</a></p>
+                    <p>Lorem ipsum dolor sit, amet consectetur elit... <a href="#">Read More</a></p>
                 </article>
-                <article>
+                <article class="mb-3">
                     <figure>
-                        <img src="../assets/images/asideArtista3.avif" alt="" class="img-fluid">
+                        <img src="../assets/images/asideArtista3.avif" alt="" class="img-fluid" loading="lazy">
                     </figure>
                     <h4>News headiline will come here</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit... <a href="#">Read More</a></p>
+                    <p>Lorem ipsum dolor sit, amet consectetur elit... <a href="#">Read More</a></p>
                 </article>
-                <article>
+                <article class="mb-3">
                     <figure>
-                        <img src="../assets/images/asideArtista2.avif" alt="" class="img-fluid">
+                        <img src="../assets/images/asideArtista2.avif" alt="" class="img-fluid" loading="lazy">
                     </figure>
                     <h4>News headiline will come here</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit... <a href="#">Read More</a></p>
+                    <p>Lorem ipsum dolor sit, amet consectetur elit... <a href="#">Read More</a></p>
                 </article>
             </section>
         </aside>
-
-        <div class="banner">
-            <img src="../assets/images/banner2.jpg" alt="marca promocional en carro de la formula 1" class="img-fluid" width="100%">
-        </div>
-
     </div>
 
-    <footer class="row ">
-        <div class="col-md-4">
-            <article>
-                <figure>
-                    <img src="../assets/images/mainImg1.avif"  alt="" class="img-fluid" loading="lazy">
-                </figure>
-                <div>
-                    <h3>News headiline will come here for thw feactude news section</h3>
-                    <p>couple of lines reload to News will... <a href="#">Read More</a></p>
-                    <span>19 oct 2023</span>
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="../assets/images/mainImg1.avif"  alt="" class="img-fluid" loading="lazy">
-                </figure>
-                <div>
-                    <h3>News headiline will come here for thw feactude news section</h3>
-                    <p>couple of lines reload to News will... <a href="#">Read More</a></p>
-                    <span>19 oct 2023</span>
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="../assets/images/mainImg1.avif"  alt="" class="img-fluid" loading="lazy">
-                </figure>
-                <div>
-                    <h3>News headiline will come here for thw feactude news section</h3>
-                    <p>couple of lines reload to News will... <a href="#">Read More</a></p>
-                    <span>19 oct 2023</span>
-                </div>
-            </article>
-        </div>
-        <div class="col-md-4">
-            <article>
-                <figure>
-                    <img src="../assets/images/mainImg1.avif" alt="" class="img-fluid" loading="lazy">
-                </figure>
-                <div>
-                    <h3>News headiline will come here for thw feactude news section</h3>
-                    <p>couple of lines reload to News will... <a href="#">Read More</a></p>
-                    <span>19 oct 2023</span>
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="../assets/images/mainImg1.avif"  alt="" class="img-fluid" loading="lazy">
-                </figure>
-                <div>
-                    <h3>News headiline will come here for thw feactude news section</h3>
-                    <p>couple of lines reload to News will... <a href="#">Read More</a></p>
-                    <span>19 oct 2023</span>
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="../assets/images/mainImg1.avif"  alt="" class="img-fluid" loading="lazy">
-                </figure>
-                <div>
-                    <h3>News headiline will come here for thw feactude news section</h3>
-                    <p>couple of lines reload to News will... <a href="#">Read More</a></p>
-                    <span>19 oct 2023</span>
-                </div>
-            </article>
-        </div>
-        <div class="col-md-4">
-            <h5>Recent comments</h5>
-            <div>
-                <p>News headiline will here for the feature news section</p>
-                <span><strong>By: Abhishek Sharma</strong></span>
-            </div>
-            <div>
-                <p>News headiline will here for the feature news section</p>
-                <span><strong>By: Abhishek Sharma</strong></span>
-            </div>
-            <div>
-                <p>News headiline will here for the feature news section</p>
-                <span><strong>By: Abhishek Sharma</strong></span>
-            </div>
-            <div>
-                <p>News headiline will here for the feature news section</p>
-                <span><strong>By: Abhishek Sharma</strong></span>
-            </div>
+    <div class="banner container">
+        <img src="../assets/images/banner2.jpg" alt="marca promocional en carro de la formula 1" class="img-fluid" loading="lazy">
+    </div>
 
+
+    <footer class="row ">
+
+        <div class="col-sm-6 col-md-4  notices">
+            <h5>Editor's Pick</h5>
+
+            <article class="d-flex m-2">
+                <figure class="imgFooter">
+                    <img src="../assets/images/imgAside1.avif" alt="" type="img/jpg" class="img-fluid" loading="lazy">
+                </figure>
+                <div class="m-1">
+                    <h3>News headiline will come here for thw feactude news section</h3>
+                    <p>couple of lines reload to News will... <a href="#">Read More</a></p>
+                    <span>19 oct 2023</span>
+                </div>
+            </article>
+
+            <article class="d-flex m-2">
+                <figure class="imgFooter">
+                    <img src="../assets/images/imgAside1.avif" alt="" type="img/jpg" class="img-fluid" loading="lazy">
+                </figure>
+                <div class="m-1">
+                    <h3>News headiline will come here for thw feactude news section</h3>
+                    <p>couple of lines reload to News will... <a href="#">Read More</a></p>
+                    <span>19 oct 2023</span>
+                </div>
+            </article>
+
+            <article class="d-flex m-2">
+                <figure class="imgFooter">
+                    <img src="../assets/images/imgAside1.avif" alt="" type="img/jpg" class="img-fluid" loading="lazy">
+                </figure>
+                <div class="m-1">
+                    <h3>News headiline will come here for thw feactude news section</h3>
+                    <p>couple of lines reload to News will... <a href="#">Read More</a></p>
+                    <span>19 oct 2023</span>
+                </div>
+            </article>
+
+            <h6 class="p-3">View All</h6>
+
+        </div>
+
+        <div class="col-sm-6 col-md-4 notices">
+            <h5>Popular Post</h5>
+            <article class="d-flex m-2">
+                <figure class="imgFooter">
+                    <img src="../assets/images/imgAside1.avif" alt="" type="img/jpg" class="img-fluid" loading="lazy">
+                </figure>
+                <div class="m-1">
+                    <h3>News headiline will come here for thw feactude news section</h3>
+                    <p>couple of lines reload to News will... <a href="#">Read More</a></p>
+                    <span>19 oct 2023</span>
+                </div>
+            </article>
+            <article class="d-flex m-2">
+                <figure class="imgFooter">
+                    <img src="../assets/images/imgAside1.avif" alt="" type="img/jpg" class="img-fluid" loading="lazy">
+                </figure>
+                <div class="m-1">
+                    <h3>News headiline will come here for thw feactude news section</h3>
+                    <p>couple of lines reload to News will... <a href="#">Read More</a></p>
+                    <span>19 oct 2023</span>
+                </div>
+            </article>
+            <article class="d-flex m-2">
+                <figure class="imgFooter">
+                    <img src="../assets/images/imgAside1.avif" alt="" type="img/jpg" class="img-fluid" loading="lazy">
+                </figure>
+                <div class="m-1">
+                    <h3>News headiline will come here for thw feactude news section</h3>
+                    <p>couple of lines reload to News will... <a href="#">Read More</a></p>
+                    <span>19 oct 2023</span>
+                </div>
+            </article>
+            <h6 class="p-3">View All</h6>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+            <h5>Recent comments</h5>
+            <div class="mb-3">
+                <p>News headiline will here for the feature news section</p>
+                <span><strong>By: Abhishek Sharma</strong></span>
+            </div>
+            <div class="mb-3">
+                <p>News headiline will here for the feature news section</p>
+                <span><strong>By: Abhishek Sharma</strong></span>
+            </div>
+            <div class="mb-3">
+                <p>News headiline will here for the feature news section</p>
+                <span><strong>By: Abhishek Sharma</strong></span>
+            </div>
+            <div class="mb-3">
+                <p>News headiline will here for the feature news section</p>
+                <span><strong>By: Abhishek Sharma</strong></span>
+            </div>
+            <h6 class="p-3">View All</h6>
+        </div>
+
+        <div class="d-flex  flex-wrap justify-content-between copy">
+           <p class="">&copy;copyright 2023 All Rights Reserved Davinson vanegas </p>
+           <ul class="d-flex flex-wrap m-0 gap-4">
+            <li>Terms and Conditions</li>
+            <li>Privacy Policy</li>
+            <li>Disclaimer</li>
+            <li>Advertisement</li>
+           </ul>
         </div>
     </footer>
 
