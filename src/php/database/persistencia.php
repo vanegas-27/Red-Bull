@@ -139,10 +139,12 @@ class Bd{
         $conn = $this-> conectionBd($bd);
 
         $sql = "CREATE TABLE IF NOT EXISTS `$bd`.`$nameTable` (
+            `id` INT NOT NULL AUTO_INCREMENT,
             `fecha` DATE NOT NULL,
             `encabezado` VARCHAR(100) NOT NULL,
-            `imagen` VARCHAR(400) NOT NULL,
-            `descripcion` VARCHAR(255) NOT NULL) ENGINE = InnoDB;";
+            `imagen` VARCHAR(500) NOT NULL,
+            `descripcion` VARCHAR(255) NOT NULL,
+            PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 
         try{
             mysqli_query($conn,$sql);
@@ -190,6 +192,7 @@ class Bd{
             while($row = mysqli_fetch_array($query)){
 
                 $list = array(
+                    $row['id'],
                     $row['fecha'],
                     $row['encabezado'],
                     $row['imagen'],
@@ -223,7 +226,7 @@ class Bd{
 
         $conn = $this-> conectionBd($bd);
 
-        $sql = "INSERT INTO `$nameTable` (`fecha`,`encabezado`, `imagen`, `descripcion`) VALUES ('$array[0]', '$array[1]', '$array[2]', '$array[3]');";
+        $sql = "INSERT INTO `$nameTable` (`id`,`fecha`,`encabezado`, `imagen`, `descripcion`) VALUES ('NULL','$array[0]', '$array[1]', '$array[2]', '$array[3]');";
 
         try{
             mysqli_query($conn,$sql);
@@ -253,7 +256,7 @@ class Bd{
         $conn = $this-> conectionBd($bd);
 
         $sql = "UPDATE `$nameTable`
-        SET `fecha`='$array[0]',`encabezado`='$array[1]',`imagen`='$array[2]',`descripcion`='$array[3]', WHERE parametro = 'parametro' ;";
+        SET `fecha`='$array[0]',`encabezado`='$array[1]',`imagen`='$array[2]',`descripcion`='$array[3]', WHERE id = '$row[4]';";
 
         try{
             mysqli_query($conn,$sql);

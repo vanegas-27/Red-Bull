@@ -1,6 +1,32 @@
 <?php
+// include('../database/persistencia.php');
 
-include('../database/persistencia.php');
+// $lista = "";
+
+// if(isset($_GET['tabla'])){
+
+
+//     $bd = new Bd();
+
+//     $result = $bd -> read("redbull",$_POST['tabla']);
+
+//     foreach($result as $i){
+//         $lista .= "
+//         <tr>
+//             <td>$i[0]</td>
+//             <td>$i[1]</td>
+//             <td>$i[2]</td>
+//             <td>$i[3]</td>
+//             <td>$i[4]</td>
+//         </tr>
+//         \n
+//         ";
+//     }
+// }
+
+
+
+
 
 
 ?>
@@ -8,6 +34,8 @@ include('../database/persistencia.php');
 <!DOCTYPE html>
 <html lang="en">
 
+
+<img src="" >
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -161,7 +189,7 @@ include('../database/persistencia.php');
 				<img src="../../../assets/images/new-post.png" class="img-fluid">
 			</figure>
 
-            <form action="" method="post" class="col-md-6" enctype="multipart/form-data">
+            <form action=""  class="col-md-6" enctype="multipart/form-data">
 
                 <div class="form-floating mb-3">
                     <input type="date" class="form-control" name="fecha" id="fecha" placeholder="name@example.com" required>
@@ -169,30 +197,30 @@ include('../database/persistencia.php');
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="encabezado" placeholder="Encabezado" required>
+                    <input type="text" class="form-control" name="encabezado" id="encabezado" placeholder="Encabezado" required>
                     <label for="encabezado">Encabezado</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="file" class="form-control" id="imagen" placeholder="imagen" required>
+                    <input type="file" class="form-control" name="imagen" id="imagen" placeholder="imagen" required>
                     <label for="imagen">imagen</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <textarea type="text" class="form-control" id="descripcion" placeholder="descripcion" required></textarea>
+                    <textarea type="text" class="form-control" name="descripcion" id="descripcion" placeholder="descripcion" required></textarea>
                     <label for="descripcion">descripcion</label>
                 </div>
 
                 <div class="form-floating mb-3">
                     <input list="lista" class="form-control" required></input>
-                    <datalist name="lista" id="lista">
+                    <datalist id="lista">
                         <option>actualizar</option>
                         <option>eliminar</option>
                         <option>crear</option>
                     </datalist>
                     <label for="lista">metodo de envio</label>
                 </div>
-                <button class="btn btn-primary"  name="send">enviar</button>
+                <button class="btn btn-primary"  name="send" >enviar</button>
 
             </form>
 		</section>
@@ -206,13 +234,6 @@ include('../database/persistencia.php');
                 <th scope="col">descripcion</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>0</td>
-                    <td>dasdsa</td>
-                    <td>9000</td>
-                    <td>30</td>
-                    <td>sdfsd</td>
-                </tr>
             </tbody>
         </table>
 	</main>
@@ -235,11 +256,13 @@ include('../database/persistencia.php');
             $('button.btn').click(function(){
 
                 if(metodo == null || value == null){
-                    alert('Seleccione una opcion de la lista')
+                    alert('faltan datos por selecionar')
                     return;
                 }else{
                     $('form').attr('action',`../procesos/${value}.php?tabla=${value}&metodo=${metodo}`);
                 }
+
+
 
             });
 
@@ -247,10 +270,28 @@ include('../database/persistencia.php');
 
 			$('ul li').click(function () {
 
-
-				let select = $(this).data('op');
+                let select = $(this).data('op');
 
                 value = $(this).html();
+
+                $.ajax({
+                    url : "../procesos/renderTable.php",
+                    type: "POST",
+                    async : true,
+                    data : {
+                        'tabla' : value
+                    },
+
+                    beforeSend : function(){
+                        console.log('cargando...');
+                    },
+
+                    success : function(data){
+                        $('tbody').html(data);
+                    }
+                });
+
+
 
 				$('figure').not('.' + select).slideUp();
 

@@ -4,6 +4,7 @@ include("../database/persistencia.php");
 $bd = new Bd();
 
 
+
 $metodo = $_GET['metodo'];
 $tabla = $_GET['tabla'];
 
@@ -13,8 +14,6 @@ $encabezado = $_POST['encabezado'];
 $descripcion = $_POST['descripcion'];
 $urlImag = $_FILES['imagen']['tmp_name'];
 $nameImg = "imagen_".time()."_".$_FILES['imagen']['name'];
-
-move_uploaded_file($urlImag,"../../upload/$nameImg");
 
 $location = "./src/upload/$nameImg";
 
@@ -32,10 +31,11 @@ if($metodo == "crear"){
 }else if($metodo == "eliminar"){
     echo"procesando...";
 }else{
-    header("Location: ../interfaces/dashboard.php");
+    echo"error en el metodo";
+    // header("Location: ../interfaces/dashboard.php");
 }
 
-//original de artuculo
+// //original de artuculo
 
 
 

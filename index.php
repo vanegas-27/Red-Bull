@@ -2,7 +2,13 @@
 
 include("./src/php/database/persistencia.php");
 
+$bd = new Bd();
 
+
+
+// $query = $bd -> read("redbull","torneos");
+
+// $nodo = "<img src=".$query[0][2].">";
 ?>
 <!DOCTYPE html>
 <html lang="es">
