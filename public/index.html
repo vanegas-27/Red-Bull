@@ -55,7 +55,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400&display=swap" rel="stylesheet">
 
     <!--estilos propios-->
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
 
 
 </head>
@@ -63,25 +63,61 @@
 <body class="container-fluid">
 
     <header class="row container-fluid">
-        <figure class="col-md-3" >
-            <img src="../assets/icons/redbullcom-logo.svg" type="img/svg" alt="Logo Red Bull" class="img-fluid" loading="lazy">
-        </figure>
-        <figure class="col-md-9">
-            <img src="../assets/images/bannerPrincipal.webp" alt="banner promocional" type="img/webp" class="img-fluid" loading="lazy">
-        </figure>
-        <nav class="container-fluid">
-            <ul class="d-flex justify-content-between col-md-12">
+        <!--- navegacion bootstrap-->
+        <nav class="navbar bg-body-tertiary ">
+
+            <div class="container-fluid ">
+
+                <figure class="col-md-3 d-flex justify-content-between container-fluid" >
+                    <img src="../assets/icons/redbullcom-logo.svg" type="img/svg" alt="Logo Red Bull" class="img-fluid" loading="lazy">
+                    <button class="navbar-toggler menHamn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+                    </button>
+                </figure>
+                <figure class="col-md-9">
+                    <img src="../assets/images/bannerPrincipal.webp" alt="banner promocional" type="img/webp" class="img-fluid" loading="lazy">
+                </figure>
+
+                <div class="offcanvas-header">
+
+                <div class="offcanvas offcanvas-start bg-transparent" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+                    <div class="offcanvas-header">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li>Home</li>
+                            <li >Deports</li>
+                            <li>Freestyle</li>
+                            <li>Car's</li>
+                            <li>Products</li>
+                            <li>Artist</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          </nav>
+          <!-- hasta aca-->
+
+          <nav class="container-fluid ">
+            <ul class="d-flex justify-content-evenly col-md-12">
                 <li>Home</li>
-                <li>Fashion</li>
-                <li>Politics</li>
-                <li>Lifestyle</li>
-                <li>Bollywood</li>
-                <li>Education</li>
-                <li>Sports</li>
-                <li>Property</li>
+                <li>Deports</li>
+                <li>Freestyle</li>
+                <li>Car's</li>
+                <li>Products</li>
+                <li>Artist</li>
             </ul>
         </nav>
     </header>
+
+
 
     <div class="row container-fluid container_main_aside">
 
@@ -157,7 +193,7 @@
                         <li>Men's</li>
                         <li>Women's</li>
                         <li>Kid's</li>
-                        <li><a href="#">VieW All</a></li>
+                        <li><a href="#">View All</a></li>
                     </ul>
 
                     <div class="row mb-3">
@@ -198,7 +234,7 @@
                         <li>Men's</li>
                         <li>Women's</li>
                         <li>Kid's</li>
-                        <li><a href="#">VieW All</a></li>
+                        <li><a href="#">View All</a></li>
                     </ul>
 
                     <div class="row mb-3">
@@ -239,7 +275,7 @@
                         <li>Men's</li>
                         <li>Women's</li>
                         <li>Kid's</li>
-                        <li><a href="#">VieW All</a></li>
+                        <li><a href="#">View All</a></li>
                     </ul>
 
                     <div class="row mb-3">
@@ -280,7 +316,7 @@
                         <li>Men's</li>
                         <li>Women's</li>
                         <li>Kid's</li>
-                        <li><a href="#">VieW All</a></li>
+                        <li><a href="#">View All</a></li>
                     </ul>
 
                     <div class="row mb-3">
@@ -321,7 +357,7 @@
                         <li>Men's</li>
                         <li>Women's</li>
                         <li>Kid's</li>
-                        <li><a href="#">VieW All</a></li>
+                        <li><a href="#">View All</a></li>
                     </ul>
 
                     <div class="row mb-3">
@@ -362,7 +398,7 @@
                         <li>Men's</li>
                         <li>Women's</li>
                         <li>Kid's</li>
-                        <li><a href="#">VieW All</a></li>
+                        <li><a href="#">View All</a></li>
                     </ul>
 
                     <div class="row mb-3">
@@ -467,6 +503,7 @@
                 </article>
             </section>
         </aside>
+
     </div>
 
     <div class="banner container">
@@ -554,26 +591,26 @@
         <div class="col-sm-6 col-md-4">
             <h5>Recent comments</h5>
             <div class="mb-3">
-                <p>News headiline will here for the feature news section</p>
-                <span><strong>By: Abhishek Sharma</strong></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque repudiandae commodi voluptas ipsa...</p>
+                <span class=" d-flex justify-content-between"><strong>By: Abhishek Sharma</strong><i>19 October 2023</i></span>
             </div>
             <div class="mb-3">
-                <p>News headiline will here for the feature news section</p>
-                <span><strong>By: Abhishek Sharma</strong></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque repudiandae commodi voluptas ipsa ab, aspernatur corrupti minus molestiae</p>
+                <span class=" d-flex justify-content-between"><strong>By: Abhishek Sharma</strong><i>19 October 2023</i></span>
             </div>
             <div class="mb-3">
-                <p>News headiline will here for the feature news section</p>
-                <span><strong>By: Abhishek Sharma</strong></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque repudiandae commodi voluptas ipsa...</p>
+                <span class=" d-flex justify-content-between"><strong>By: Abhishek Sharma</strong><i>19 October 2023</i></span>
             </div>
             <div class="mb-3">
-                <p>News headiline will here for the feature news section</p>
-                <span><strong>By: Abhishek Sharma</strong></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque repudiandae commodi voluptas ipsa...</p>
+                <span class=" d-flex justify-content-between"><strong>By: Abhishek Sharma</strong><i>19 October 2023</i></span>
             </div>
             <h6 class="p-3">View All</h6>
         </div>
 
         <div class="d-flex  flex-wrap justify-content-between copy">
-           <p class="">&copy;copyright 2023 All Rights Reserved Davinson vanegas </p>
+           <p class="">&copy;copyright 2023 All Rights Reserved</p>
            <ul class="d-flex flex-wrap m-0 gap-4">
             <li>Terms and Conditions</li>
             <li>Privacy Policy</li>

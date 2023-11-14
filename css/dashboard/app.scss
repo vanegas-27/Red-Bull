@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(189, 186, 186);
+}
+
+.inactive{
+    display: none !important;
+}
+
+header{
+    align-items: center;
+    position: relative;
+
+    ul{
+        padding: 0px;
+        font-family: $fontPrimary;
+        text-align: center;
+
+
+        li{
+            margin: 5px auto;
+            display: table;
+            font-size: $txtP;
+            padding: 8px 10px;
+            font-weight: 300;
+            cursor: pointer;
+            transition: all 0.40s ease;
+            border-bottom: 2px solid $colorPrimary2;
+
+        }
+
+        li:hover{
+            border-radius: 5px 15px;
+            transform: scale(1.1);
+            background-color: $colorSombra2;
+            translate: 10px 0px;
+        }
+    }
+
+    .menHamn{
+        background-color: $colorPrimary !important;
+
+        i{
+            font-size: 2rem;
+        }
+    }
+
+
+
+}

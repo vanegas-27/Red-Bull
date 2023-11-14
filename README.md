@@ -40,7 +40,7 @@ Software diseñado para brindar información relevante sobre las novedades  de l
 
 
     # php
-    - este directorio se encarga de contener los scripts de php, encargados de renderizar la pagina con los datos de la base de datos y validar que todo este funcionando correctamente.
+    - este directorio se encarga de contener los scripts de php, encargados de crear los componentes para la pagina con los datos de la base de datos y validar que todo este funcionando correctamente.
 
     # upload
     - este directorio en particular sera la ubicacion en donde las imagenes se guardaran despues de insertar una imagen
@@ -65,4 +65,25 @@ Software diseñado para brindar información relevante sobre las novedades  de l
 
 - en la maquetacion se implemento varias clases ya predefinidas por Bootstrap para poder trabajar con contenedores o imagenes y poder darle una mayor flexibilidad a su conportamineto, aunque en su momento. se me presento un problema con la colocacion de los contenedores de la pagina como lo son el aside y main.  ya que no se me vizualizaba como queria asi que para darle solucion los encerre en un div y dentro los maneje a mi gusto 
 
-- implemento las primeras lineas de css para poder ver la algo parecida al layout o wifre escogido en clase, se incorporan variables para los colores y el tipo de fuebte que deben de tener los encabezados y parrafos igualmente se implementan las medidas que se van a utilizar para los textos y encabezados del Software.
+- implemento las primeras lineas de css para poder ver la algo parecida al layout o wifre escogido en clase, se incorporan variables para los colores y el tipo de fuente que deben de tener los encabezados y parrafos igualmente se implementan las medidas que se van a utilizar para los textos y encabezados del Software.
+
+- luego de tener ya todo maquetado y con su estilo proceso a contruir el archivo donde se cargaran los productos o eventos etc... de manera dinamica y no hardcodiada, el encargado de este renderizado es index.php.
+
+en este archivo marco o identifico donde voy a renderizar los componentes y que tipo de datos se cargaran dependiendo su categoria o caracteristicas para luego no perderme en su ubicacion.
+
+# login 
+- prosigo con la creacion del login ya que intentare crear mi propio cPanel donde pueda crear, eliminar, editar lo componentes que se reflejan en la pagina Red Bull. para eso creare solo dos usuarios que puedan entrar al cPanel, debido a las necesidades creo un nuevo directorio en php llamado CPanel y dentro de este un script de php llamado login y otro cPanel
+
+-> davinson vanegas : 
+    correo: davidsonvanegas27@gmail.com
+    password : Davidson*
+
+-> juan arroyave : 
+    correo : juanarroyave@politecnicomayor.edu.co
+    password : Juan123*  <- SUPER SEGURA CONTRA HACKER.🫡
+
+y en este proceso se intentara implementar el envio de correo donde le envie al usuario un mensaje de advertencia donde le indique que alguien accedio al cPanel. 
+
+## pasos de creacion login y cPanel...
+
+- (1). en la ruta php/database/persistencia.php empiezo creando mi clase que se encargara de varios metodos para su correcto funcionamiento en la BD.

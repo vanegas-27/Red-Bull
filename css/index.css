@@ -7,9 +7,29 @@
   color: rgb(255, 255, 255);
 }
 
+header nav figure:first-child button {
+  display: none;
+}
+
 a {
+  font-size: 16px;
+  font-family: "Bull VF", Helvetica, sans-serif;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
+  color: rgb(10, 187, 231);
+}
+
+h1, h2, h2, h4, h5, h6 {
+  font-family: "Bull VF", Helvetica, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+a:hover {
+  color: #c5c3c3;
 }
 
 body {
@@ -18,13 +38,34 @@ body {
 
 header {
   align-items: center;
-  padding-top: 30px;
+  position: relative;
 }
 header ul {
   padding: 0px;
   font-family: "Bull VF", Helvetica, sans-serif;
-  font-size: 1.1rem;
+  text-align: center;
+}
+header ul li {
+  margin: 5px auto;
+  display: table;
+  font-size: 1.2rem;
+  padding: 8px 10px;
   font-weight: 300;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border-bottom: 2px solid rgb(10, 187, 231);
+}
+header ul li:hover {
+  border-radius: 5px 15px;
+  transform: scale(1.1);
+  background-color: rgb(10, 93, 175);
+  translate: 10px 0px;
+}
+header .menHamn {
+  background-color: #001c39 !important;
+}
+header .menHamn i {
+  font-size: 2rem;
 }
 
 .container_main_aside {
@@ -50,7 +91,13 @@ header ul {
 .container_main_img_banner .arrows i {
   cursor: pointer;
   padding: 8px;
-  background-color: #001c39;
+  background-color: rgb(10, 187, 231);
+  border-radius: 5px;
+  border: 1px solid rgb(10, 187, 231);
+  transition: all 0.3s ease-in-out;
+}
+.container_main i:hover {
+  background-color: transparent;
 }
 .container_main section:nth-child(2) {
   margin-top: 50px;
@@ -78,13 +125,15 @@ header ul {
 .container_main_notice h3 {
   position: absolute;
   bottom: 0px;
-  font-size: 1.3rem;
+  font-size: 24px;
   padding: 0px 10px;
 }
 .container_main_notice i {
   padding: 6px;
   cursor: pointer;
-  background-color: black;
+  background-color: rgb(10, 187, 231);
+  border-radius: 5px;
+  border: 1px solid rgb(10, 187, 231);
 }
 .container_main_notice_info * {
   margin: 0px;
@@ -103,33 +152,36 @@ header ul {
   padding: 0px 10px;
 }
 .container_main_notice_info h3 {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
 }
 .container_main_notice_info p {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
 }
 .container_main_category ul {
-  border-bottom: 4px solid orange;
+  border-bottom: 4px solid rgb(10, 187, 231);
   padding: 0px;
   display: flex;
 }
-.container_main_category ul li:first-child,
-.container_main_category ul li:hover {
-  background-color: orange;
-  border-radius: 5px 5px 0px 0px;
-  transition: all 0.3s ease-in-out;
+.container_main_category ul a {
+  font-size: 1.3rem;
 }
 .container_main_category ul li {
   padding: 10px 15px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
+.container_main_category ul li:first-child,
+.container_main_category ul li:hover {
+  background-color: rgb(10, 187, 231);
+  border-radius: 5px 5px 0px 0px;
+  transition: all 0.3s ease-in-out;
+}
 .container_main_category ul a {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .container_main_category_img div {
   position: relative;
@@ -149,11 +201,11 @@ header ul {
 .container_main_category_img h3 {
   position: absolute;
   bottom: 0px;
-  font-size: 15px;
+  font-size: 16px;
   padding: 0px 10px;
 }
 .container_main_category_img p {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   color: #c5c3c3;
   padding: 2px 5px;
@@ -166,13 +218,13 @@ header ul {
   margin-bottom: 15px;
 }
 .container_aside h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 600;
   padding-left: 10px;
 }
 .container_aside span {
   height: 3px;
-  background: orange;
+  background: rgb(10, 187, 231);
   display: block;
 }
 .container_aside_redes {
@@ -182,31 +234,28 @@ header ul {
   padding: 0px;
 }
 .container_aside_redes ul li {
+  font-size: 16px;
   margin: 15px 0px;
 }
 .container_aside_redes .bi {
   border-radius: 50%;
   padding: 3px 6px;
+  color: rgb(255, 255, 255);
 }
 .container_aside_redes .bi-facebook {
-  background-color: blue;
-  color: white;
+  background-color: rgb(17, 17, 241);
 }
 .container_aside_redes .bi-twitter {
-  background-color: rgb(15, 91, 233);
-  color: white;
+  background-color: rgb(20, 97, 240);
 }
 .container_aside_redes .bi-youtube {
-  background-color: red;
-  color: white;
+  background-color: rgb(245, 9, 9);
 }
 .container_aside_redes .bi-instagram {
   background-color: rgb(105, 48, 25);
-  color: white;
 }
 .container_aside_redes .bi-pinterest {
   background-color: red;
-  color: white;
 }
 .container_aside_img img {
   height: 11rem;
@@ -218,19 +267,19 @@ header ul {
 }
 .container_aside .ulAside {
   padding: 0px;
-  border-bottom: 4px solid orange;
+  border-bottom: 4px solid rgb(10, 187, 231);
 }
 .container_aside .ulAside .liAside {
-  color: white;
-  background-color: orange;
-  font-size: 1.6rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(10, 187, 231);
+  font-size: 1.3rem;
   padding: 5px 15px;
   font-weight: 500;
   font-style: italic;
   display: table;
 }
 .container_aside h4 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 .container_aside p {
@@ -271,11 +320,12 @@ footer .notices h3 {
 }
 footer .notices p {
   color: #c5c3c3;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 100;
 }
 footer .notices span {
-  font-size: 13px;
+  width: 91%;
+  font-size: 12px;
   font-weight: 700;
 }
 footer h6 {
@@ -287,9 +337,12 @@ footer .copy {
   background-color: rgb(0, 0, 0);
 }
 
-@media (width <= 770px) {
+@media (width <= 760px) {
   .container_main_aside {
     padding: 0;
+  }
+  header nav figure:first-child button {
+    display: block;
   }
   nav {
     display: none;
@@ -299,4 +352,4 @@ footer .copy {
   .container_main_category article ul {
     display: block;
   }
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=index.css.map */

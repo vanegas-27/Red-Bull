@@ -1,0 +1,23 @@
+body {
+  background-image: url(../../assets/images/publico.avif);
+  background-repeat: no-repeat;
+}
+
+.inactive {
+  display: none !important;
+}
+
+form {
+  background-color: rgba(0, 28, 57, 0.4235294118);
+  width: 80%;
+  max-width: 730px !important;
+  padding: 40px 0px;
+}
+form figure:first-child {
+  padding: 0px;
+  margin: 0px;
+  max-width: 340px;
+}
+form figure:first-child img {
+  border-radius: 29px;
+}/*# sourceMappingURL=logi.css.map */

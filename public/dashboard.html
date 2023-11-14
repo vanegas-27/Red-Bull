@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Red Bull| Te da alas los mejores en noticias de deporte mundialmente, fresstyle, autos, bebidas, ropa
+	</title>
+
+	<!-- iconos de la pagina oficial de Red Bull-->
+	<link rel="icon" sizes="16x16"
+		href="https://img.redbull.com/images/c_scale,w_16/favicons/www.redbull.com/favicon/favicon-16.png">
+	<link rel="icon" sizes="32x32"
+		href="https://img.redbull.com/images/c_scale,w_32/favicons/www.redbull.com/favicon/favicon-32.png">
+	<link rel="icon" sizes="96x96"
+		href="https://img.redbull.com/images/c_scale,w_96/favicons/www.redbull.com/app-icon/favicon-96.png">
+
+	<!-- link de jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+	<!--descripcion de pagina-->
+	<meta name="description"
+		content="
+            Red Bull, la icónica bebida energética, ha cautivado a consumidores de todo el mundo con su fórmula única y refrescante que combina taurina, cafeína y vitaminas para proporcionar una dosis instantánea de energía. Diseñada para impulsar el rendimiento físico y mental, Red Bull ha trascendido su función original como una bebida estimulante para convertirse en un símbolo de estilo de vida activo y aventurero.">
+
+	<!--palabras claves-->
+	<meta name="keywords"
+		content="Estimulante, Taurina, Cafeína Vitaminas, Refrescante, Deportes, extremos, Patrocinio, Alas, Sabor, Rendimiento, Estilo de vida, activo Marca de bebidas, Marketing, Aventura, Innovación, Fórmula 1, Música, Desempeño, físico">
+
+	<!--para decirle al los robots que la pagina sea mas visible al usuario y pueda ser indexada-->
+	<meta name="robots" content="index,follow">
+
+	<!--author-->
+	<meta name="author" content="Davinson Andres Vanegas Tabares">
+
+	<!--derechos de autor-->
+	<meta name="copyright" content="Davinson vanegas">
+
+	<!--cache-->
+	<meta http-equiv="cache-control" content="cache">
+	<!--tiempo de cache-->
+	<meta http-equiv="expires" content="0">
+
+
+	<!-- link para el css bootstrap 5.0.2-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+
+	<!--link de icons de bootstrap-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+	<!--fuente de textos-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400&display=swap" rel="stylesheet">
+
+	<!--estilos propios-->
+	<link rel="stylesheet" type="text/css" href="../css/dashboard/app.css">
+
+</head>
+
+<body>
+
+	<header class="row container-fluid">
+		<!--- navegacion bootstrap-->
+		<nav class="navbar bg-body-tertiary ">
+
+			<div class="container-fluid ">
+
+				<figure class="col-md-6 d-flex justify-content-between container-fluid">
+					<img src="../assets/icons/redbullcom-logo.svg" type="img/svg" alt="Logo Red Bull" class="img-fluid"
+						loading="lazy">
+					<button class="navbar-toggler menHamn" type="button" data-bs-toggle="offcanvas"
+						data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon d-block d-sm-none justify-content-between"><i
+								class="bi bi-list "></i></span>
+					</button>
+				</figure>
+
+
+				<div class="offcanvas-header">
+
+					<div class="offcanvas offcanvas-start bg-transparent" tabindex="-1" id="offcanvasNavbar"
+						aria-labelledby="offcanvasNavbarLabel">
+
+						<div class="offcanvas-header">
+							<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+								data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+								aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+
+							<button type="button" class="btn-close bg-primary" data-bs-dismiss="offcanvas"
+								aria-label="Close"></button>
+						</div>
+
+						<div class="offcanvas-">
+							<ul class="flex-grow-1 pe-3 ">
+								<li data-op="op1">Banner Pincipal</li>
+								<li data-op="op2">Eventos</li>
+								<li data-op="op3">Articulos</li>
+								<li data-op="op4">Torneos</li>
+								<li data-op="op5">Logros</li>
+								<li data-op="op6">new Post</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+		</nav>
+		<!-- hasta aca-->
+
+		<nav class="container m-auto">
+			<ul class="d-flex justify-content-evenly col-md-12 d-none d-sm-flex">
+				<li data-op="op1">banners</li>
+				<li data-op="op2">eventos</li>
+				<li data-op="op3">articulos</li>
+				<li data-op="op4">torneos</li>
+				<li data-op="op5">logros</li>
+				<li data-op="op6">post</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+
+		<section class="row container-fluid m-auto">
+			<figure class="col-md-6 op1">
+				<img src="../assets/images/banner.png" class="img-fluid">
+			</figure>
+
+			<figure class="col-md-6 op2">
+				<img src="../assets/images/eventos.png" class="img-fluid">
+			</figure>
+
+			<figure class="col-md-6 op3">
+				<img src="../assets/images/articulos.png" class="img-fluid">
+			</figure>
+
+			<figure class="col-md-6 op4">
+				<img src="../assets/images/torneos.png" class="img-fluid">
+			</figure>
+
+			<figure class="col-md-6 op5">
+				<img src="../assets/images/logros.png" class="img-fluid">
+			</figure>
+
+			<figure class="col-md-6 op6">
+				<img src="../assets/images/new-post.png" class="img-fluid">
+			</figure>
+
+            <form action="" method="post" class="col-md-6" enctype="multipart/form-data">
+
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" name="fecha" id="fecha" placeholder="name@example.com" required>
+                    <label for="fecha">fecha</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="encabezado" id="encabezado" placeholder="Encabezado" required>
+                    <label for="encabezado">Encabezado</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="file" class="form-control" id="imagen" name="imagen" placeholder="imagen" required>
+                    <label for="imagen">imagen</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <textarea type="text" class="form-control" id="descripcion" name="descripcion" placeholder="descripcion" required></textarea>
+                    <label for="descripcion">descripcion</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input list="lista" class="form-control">
+                    <datalist name="lista" id="lista" required>
+                        <option>actualizar</option>
+                        <option>eliminar</option>
+                        <option>crear</option>
+                    </datalist>
+                </div>
+
+                <button class="btn btn-primary"  name="send">enviar</button>
+
+            </form>
+		</section>
+
+        <table class="table lista">
+            <thead >
+                <th scope="col">Id</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Encabezado</th>
+                <th scope="col">imagen</th>
+                <th scope="col">descripcion</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>dasdsa</td>
+                    <td>9000</td>
+                    <td>30</td>
+                    <td>sdfsd</td>
+                </tr>
+            </tbody>
+        </table>
+
+	</main>
+
+
+	<script>
+		$(document).ready(function ($) {
+
+            $('figure').slideUp();
+
+            let value = null;
+            let metodo = null;
+
+
+            $('input[list=lista]').change(() => {
+                metodo = $("input[list=lista]").val();
+            })
+
+
+            $('button.btn').click(function(){
+
+                if(metodo == null || value == null){
+                    alert('Seleccione una opcion de la lista');
+                    return;
+                }else{
+                    $('form').attr('action',`../src/php/procesos/${value}.php?tabla=${value}&metodo=${metodo}`);
+                }
+
+            });
+
+
+
+			$('ul li').click(function () {
+
+
+				let select = $(this).data('op');
+
+                value = $(this).html();
+
+				$('figure').not('.' + select).slideUp();
+
+				$('.' + select).slideDown();
+
+            });
+
+
+        });
+
+	</script>
+</body>
+
+</html>
