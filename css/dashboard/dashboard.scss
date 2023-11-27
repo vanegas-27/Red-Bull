@@ -1,0 +1,104 @@
+//variables de style
+$colorPrimary : #001c39;
+$colorPrimary2: rgb(10, 187, 231); // rgb(247, 164, 10)
+$colorTreciario : rgb(228, 27, 27);
+$colorSombra :#c5c3c3;
+$colorSombra2: rgb(10, 93, 175);
+$white : rgb(255 255 255);
+$black : rgb(0 0 0);
+
+$fontsecundary : 'Roboto',
+sans-serif;
+$fontPrimary: 'Bull VF', Helvetica, sans-serif;
+
+$txtP : 1.2rem;
+$txtM : 1.3rem;
+$txtG : 1.5rem;
+
+$textoP : 12px;
+$textoM : 16px;
+$textoG : 24px;
+$textoXl : 28px;
+
+body {
+    background-color: $colorPrimary;
+}
+
+* {
+    color: white;
+}
+
+table img {
+    width: 100px;
+}
+
+.inactive {
+    display: none ;
+}
+
+label{
+    color: black;
+}
+
+header {
+    align-items: center;
+    position: relative;
+
+    ul {
+        padding: 0px;
+        font-family: $fontPrimary;
+        text-align: center;
+
+
+        li {
+            margin: 5px auto;
+            display: table;
+            font-size: $txtP;
+            padding: 8px 10px;
+            font-weight: 300;
+            cursor: pointer;
+            transition: all 0.40s ease;
+            border-bottom: 2px solid $colorPrimary2;
+            color: white;
+
+        }
+
+        li:hover {
+            border-radius: 5px 15px;
+            transform: scale(1.1);
+            background-color: $colorSombra2;
+            translate: 10px 0px;
+        }
+    }
+
+}
+
+form {
+    background-color: rgb(236, 234, 234);
+    padding: 40px 0px;
+    border-radius: 10px;
+  }
+
+  form figure:first-child {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  form .form-control{
+    background-color:transparent;
+    border: 1px solid rgba(21, 154, 187, 0.966);
+  }
+
+  form .form-control:focus-visible{
+    background-color: $colorPrimary;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 2px 10px $colorPrimary;
+    outline: none;
+    border: none;
+  }
+
+  form .form-control:focus-visible ~ label{
+    font-size: 1.2rem;
+    color: white;
+  }

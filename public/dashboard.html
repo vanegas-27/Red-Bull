@@ -18,6 +18,8 @@
 	<!-- link de jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+    <script src="../src/js/dashboard.js"></script>
+
 	<!--descripcion de pagina-->
 	<meta name="description"
 		content="
@@ -59,7 +61,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400&display=swap" rel="stylesheet">
 
 	<!--estilos propios-->
-	<link rel="stylesheet" type="text/css" href="../css/dashboard/app.css">
+	<link rel="stylesheet" type="text/css" href="../css/dashboard/dashboard.css">
 
 </head>
 
@@ -101,12 +103,12 @@
 
 						<div class="offcanvas-">
 							<ul class="flex-grow-1 pe-3 ">
-								<li data-op="op1">Banner Pincipal</li>
-								<li data-op="op2">Eventos</li>
-								<li data-op="op3">Articulos</li>
-								<li data-op="op4">Torneos</li>
-								<li data-op="op5">Logros</li>
-								<li data-op="op6">new Post</li>
+                                <li data-op="op1">banners</li>
+                                <li data-op="op2">eventos</li>
+                                <li data-op="op3">articulos</li>
+                                <li data-op="op4">torneos</li>
+                                <li data-op="op5">logros</li>
+                                <li data-op="op6">post</li>
 							</ul>
 						</div>
 
@@ -156,7 +158,7 @@
 
             <form action="" method="post" class="col-md-6" enctype="multipart/form-data">
 
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-3 ocul">
                     <input type="date" class="form-control" name="fecha" id="fecha" placeholder="name@example.com" required>
                     <label for="fecha">fecha</label>
                 </div>
@@ -166,7 +168,7 @@
                     <label for="encabezado">Encabezado</label>
                 </div>
 
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-3 ocul">
                     <input type="file" class="form-control" id="imagen" name="imagen" placeholder="imagen" required>
                     <label for="imagen">imagen</label>
                 </div>
@@ -201,61 +203,15 @@
             <tbody>
                 <tr>
                     <td>0</td>
-                    <td>dasdsa</td>
-                    <td>9000</td>
-                    <td>30</td>
-                    <td>sdfsd</td>
+                    <td>05-11-2023</td>
+                    <td>el mejor encabezado</td>
+                    <td><img src="heyyyyy loca" ></td>
+                    <td>parrafo de relleno para ta ta ta</td>
                 </tr>
             </tbody>
         </table>
 
 	</main>
-
-
-	<script>
-		$(document).ready(function ($) {
-
-            $('figure').slideUp();
-
-            let value = null;
-            let metodo = null;
-
-
-            $('input[list=lista]').change(() => {
-                metodo = $("input[list=lista]").val();
-            })
-
-
-            $('button.btn').click(function(){
-
-                if(metodo == null || value == null){
-                    alert('Seleccione una opcion de la lista');
-                    return;
-                }else{
-                    $('form').attr('action',`../src/php/procesos/${value}.php?tabla=${value}&metodo=${metodo}`);
-                }
-
-            });
-
-
-
-			$('ul li').click(function () {
-
-
-				let select = $(this).data('op');
-
-                value = $(this).html();
-
-				$('figure').not('.' + select).slideUp();
-
-				$('.' + select).slideDown();
-
-            });
-
-
-        });
-
-	</script>
 </body>
 
 </html>

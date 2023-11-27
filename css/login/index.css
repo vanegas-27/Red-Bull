@@ -1,0 +1,35 @@
+body {
+  background-color: black;
+}
+
+
+form {
+  background-color: rgb(0, 0, 0);
+  width: 80%;
+  max-width: 530px !important;
+  padding: 40px 0px;
+  border-radius: 10px;
+  background-image: linear-gradient(rgba(18, 18, 218, 0.884) ,rgba(5, 12, 48, 0.795), rgb(0, 0, 0));
+}
+
+form figure:first-child {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+form .form-control{
+  background-color:transparent;
+  border: 1px solid rgba(243, 240, 240, 0.966);
+}
+
+form .form-control:focus-visible{
+  background-color: transparent;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.637);
+}
+
+form .form-control:focus-visible ~ label{
+  font-size: 1rem;
+  color: white;
+}

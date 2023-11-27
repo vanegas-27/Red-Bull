@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Bull| Te da alas  los mejores en noticias de deporte mundialmente, fresstyle, autos, bebidas, ropa </title>
+    <title>Red Bull| Te da alas los mejores en noticias de deporte mundialmente, fresstyle, autos, bebidas, ropa
+    </title>
 
     <!-- iconos de la pagina oficial de Red Bull-->
-    <link rel="icon" sizes="16x16" href="https://img.redbull.com/images/c_scale,w_16/favicons/www.redbull.com/favicon/favicon-16.png">
-    <link rel="icon" sizes="32x32" href="https://img.redbull.com/images/c_scale,w_32/favicons/www.redbull.com/favicon/favicon-32.png">
-    <link rel="icon" sizes="96x96" href="https://img.redbull.com/images/c_scale,w_96/favicons/www.redbull.com/app-icon/favicon-96.png">
+    <link rel="icon" sizes="16x16"
+        href="https://img.redbull.com/images/c_scale,w_16/favicons/www.redbull.com/favicon/favicon-16.png">
+    <link rel="icon" sizes="32x32"
+        href="https://img.redbull.com/images/c_scale,w_32/favicons/www.redbull.com/favicon/favicon-32.png">
+    <link rel="icon" sizes="96x96"
+        href="https://img.redbull.com/images/c_scale,w_96/favicons/www.redbull.com/app-icon/favicon-96.png">
 
     <!-- link de jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -57,7 +61,6 @@
     <!--estilos propios-->
     <link rel="stylesheet" type="text/css" href="../css/index.css">
 
-
 </head>
 
 <body class="container-fluid">
@@ -68,51 +71,55 @@
 
             <div class="container-fluid ">
 
-                <figure class="col-md-3 d-flex justify-content-between container-fluid" >
-                    <img src="../assets/icons/redbullcom-logo.svg" type="img/svg" alt="Logo Red Bull" class="img-fluid" loading="lazy">
-                    <button class="navbar-toggler menHamn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <figure class="col-md-3 d-flex justify-content-between container-fluid">
+                    <img src="../assets/icons/redbullcom-logo.svg" type="img/svg" alt="Logo Red Bull" class="img-fluid"
+                        loading="lazy">
+                    <button class="navbar-toggler menHamn" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
                     </button>
                 </figure>
                 <figure class="col-md-9">
-                    <img src="../assets/images/bannerPrincipal.webp" alt="banner promocional" type="img/webp" class="img-fluid" loading="lazy">
+                    <img src="../assets/images/bannerPrincipal.webp" alt="banner promocional" type="img/webp"
+                        class="img-fluid" loading="lazy">
                 </figure>
 
                 <div class="offcanvas-header">
 
-                <div class="offcanvas offcanvas-start bg-transparent" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas offcanvas-start bg-transparent" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
 
-                    <div class="offcanvas-header">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                        <div class="offcanvas-header">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
 
-                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
+                            <button type="button" class="btn-close bg-primary" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
 
-                    <div class="offcanvas-">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li>Home</li>
-                            <li >Deports</li>
-                            <li>Freestyle</li>
-                            <li>Car's</li>
-                            <li>Products</li>
-                            <li>Artist</li>
-                        </ul>
+                        <div class="offcanvas-">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li> <a href=".">Home</a></li>
+                                <li>Deports</li>
+                                <li>Freestyle</li>
+                                <li>Cars</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-          </nav>
-          <!-- hasta aca-->
+        </nav>
+        <!-- hasta aca-->
 
-          <nav class="container-fluid ">
+        <nav class="container-fluid ">
             <ul class="d-flex justify-content-evenly col-md-12">
                 <li>Home</li>
                 <li>Deports</li>
                 <li>Freestyle</li>
-                <li>Car's</li>
-                <li>Products</li>
-                <li>Artist</li>
+                <li>Cars</li>
             </ul>
         </nav>
     </header>
@@ -123,17 +130,39 @@
 
         <main class="container_main col-md-8">
 
-            <section class="container_main_img_banner">
-                <img src="../assets/images/batalla.avif" type="img/avif" alt="esenarios de nuestros artistas" class="img-fluid" loading="lazy">
-                <div class="arrows">
-                    <i class="bi bi-caret-left"></i>
-                    <i class="bi bi-caret-right"></i>
+            <!-- banner de bootstrap-->
+            <div id="carouselExample" class="carousel slide container_main_img_banner">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img src="../assets/images/batalla.avif" class="d-block w-100" alt="">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="../assets/images/batalla.avif" class="d-block w-100" alt="">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="../assets/images/banner2.jpg" class="d-block w-100" alt="">
+                    </div>
+
                 </div>
-            </section>
+                <div class="arrows d-flex">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <i class="bi bi-caret-left arrow" aria-hidden="true"></i>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <i class="bi bi-caret-right arrow" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- hasta aca-->
 
             <section class="row">
 
-              <article class="col-md-6 container_main_notice">
+                <article class="col-md-6 container_main_notice">
                     <div>
                         <span>19 oct 2023</span>
                         <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
@@ -150,19 +179,9 @@
 
                 <div class="col-md-6 container_main_notice_info">
                     <article class="d-flex">
-                       <figure>
-                            <img src="../assets/images/imgAside1.avif" alt="" type="img/jpg" class="img-fluid" loading="lazy">
-                        </figure>
-                        <div class="m-1">
-                            <h3>News headiline will come here for thw feactude news section</h3>
-                            <p>couple of lines reload to News will... <a href="#">Read More</a></p>
-                            <span>19 oct 2023</span>
-                        </div>
-                    </article>
-
-                    <article class="d-flex">
-                     <figure>
-                            <img src="../assets/images/imgAside2.avif" type="img/jpg" alt="" class="img-fluid" loading="lazy">
+                        <figure>
+                            <img src="../assets/images/imgAside1.avif" alt="" type="img/jpg" class="img-fluid"
+                                loading="lazy">
                         </figure>
                         <div class="m-1">
                             <h3>News headiline will come here for thw feactude news section</h3>
@@ -173,7 +192,20 @@
 
                     <article class="d-flex">
                         <figure>
-                            <img src="../assets/images/imgAside3.avif" type="img/jpg" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/images/imgAside2.avif" type="img/jpg" alt="" class="img-fluid"
+                                loading="lazy">
+                        </figure>
+                        <div class="m-1">
+                            <h3>News headiline will come here for thw feactude news section</h3>
+                            <p>couple of lines reload to News will... <a href="#">Read More</a></p>
+                            <span>19 oct 2023</span>
+                        </div>
+                    </article>
+
+                    <article class="d-flex">
+                        <figure>
+                            <img src="../assets/images/imgAside3.avif" type="img/jpg" alt="" class="img-fluid"
+                                loading="lazy">
                         </figure>
                         <div class="m-1">
                             <h3>News headiline will come here for thw feactude news section</h3>
@@ -189,10 +221,9 @@
 
                 <article>
                     <ul class="justify-content-between col-12">
-                        <li>Fashion</li>
-                        <li>Men's</li>
-                        <li>Women's</li>
-                        <li>Kid's</li>
+                        <li>Deports</li>
+                        <li>Freestyle</li>
+                        <li>Cars</li>
                         <li><a href="#">View All</a></li>
                     </ul>
 
@@ -226,16 +257,6 @@
                         </div>
 
                     </div>
-                </article>
-
-                <article>
-                    <ul class="justify-content-between col-12">
-                        <li>Fashion</li>
-                        <li>Men's</li>
-                        <li>Women's</li>
-                        <li>Kid's</li>
-                        <li><a href="#">View All</a></li>
-                    </ul>
 
                     <div class="row mb-3">
 
@@ -267,139 +288,6 @@
                         </div>
 
                     </div>
-                </article>
-
-                <article>
-                    <ul class="justify-content-between col-12">
-                        <li>Fashion</li>
-                        <li>Men's</li>
-                        <li>Women's</li>
-                        <li>Kid's</li>
-                        <li><a href="#">View All</a></li>
-                    </ul>
-
-                    <div class="row mb-3">
-
-                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
-                            <div>
-                                <span>19 oct 2023</span>
-                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
-                                <h3>News headiline will come here section</h3>
-                            </div>
-                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
-                        </div>
-
-                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img">
-                            <div>
-                                <span>19 oct 2023</span>
-                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
-                                <h3>News headiline will come here section</h3>
-                            </div>
-                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
-                        </div>
-
-                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
-                            <div>
-                                <span>19 oct 2023</span>
-                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
-                                <h3>News headiline will come here section</h3>
-                            </div>
-                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
-                        </div>
-
-                    </div>
-                </article>
-
-                <article>
-                    <ul class="justify-content-between col-12">
-                        <li>Fashion</li>
-                        <li>Men's</li>
-                        <li>Women's</li>
-                        <li>Kid's</li>
-                        <li><a href="#">View All</a></li>
-                    </ul>
-
-                    <div class="row mb-3">
-
-                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
-                            <div>
-                                <span>19 oct 2023</span>
-                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
-                                <h3>News headiline will come here section</h3>
-                            </div>
-                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
-                        </div>
-
-                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img">
-                            <div>
-                                <span>19 oct 2023</span>
-                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
-                                <h3>News headiline will come here section</h3>
-                            </div>
-                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
-                        </div>
-
-                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
-                            <div>
-                                <span>19 oct 2023</span>
-                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
-                                <h3>News headiline will come here section</h3>
-                            </div>
-                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
-                        </div>
-
-                    </div>
-                </article>
-
-                <article>
-                    <ul class="justify-content-between col-12">
-                        <li>Fashion</li>
-                        <li>Men's</li>
-                        <li>Women's</li>
-                        <li>Kid's</li>
-                        <li><a href="#">View All</a></li>
-                    </ul>
-
-                    <div class="row mb-3">
-
-                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
-                            <div>
-                                <span>19 oct 2023</span>
-                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
-                                <h3>News headiline will come here section</h3>
-                            </div>
-                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
-                        </div>
-
-                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img">
-                            <div>
-                                <span>19 oct 2023</span>
-                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
-                                <h3>News headiline will come here section</h3>
-                            </div>
-                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
-                        </div>
-
-                        <div class="col-sm-6 col-md-6 col-xl-4 container_main_category_img ">
-                            <div>
-                                <span>19 oct 2023</span>
-                                <img src="../assets/images/mainImg2.avif" type="img/avif" alt="" class="img-fluid">
-                                <h3>News headiline will come here section</h3>
-                            </div>
-                            <p>couple of lines reload to News for the game will...<a href="#">Read More</a></p>
-                        </div>
-
-                    </div>
-                </article>
-
-                <article>
-                    <ul class="justify-content-between col-12">
-                        <li>Fashion</li>
-                        <li>Men's</li>
-                        <li>Women's</li>
-                        <li>Kid's</li>
-                        <li><a href="#">View All</a></li>
-                    </ul>
 
                     <div class="row mb-3">
 
@@ -487,27 +375,14 @@
                     <h4>News headiline will come here</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur elit... <a href="#">Read More</a></p>
                 </article>
-                <article class="mb-3">
-                    <figure>
-                        <img src="../assets/images/asideArtista3.avif" alt="" class="img-fluid" loading="lazy">
-                    </figure>
-                    <h4>News headiline will come here</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur elit... <a href="#">Read More</a></p>
-                </article>
-                <article class="mb-3">
-                    <figure>
-                        <img src="../assets/images/asideArtista2.avif" alt="" class="img-fluid" loading="lazy">
-                    </figure>
-                    <h4>News headiline will come here</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur elit... <a href="#">Read More</a></p>
-                </article>
             </section>
         </aside>
 
     </div>
 
     <div class="banner container">
-        <img src="../assets/images/banner2.jpg" alt="marca promocional en carro de la formula 1" class="img-fluid" loading="lazy">
+        <img src="../assets/images/banner2.jpg" alt="marca promocional en carro de la formula 1" class="img-fluid"
+            loading="lazy">
     </div>
 
 
@@ -591,34 +466,74 @@
         <div class="col-sm-6 col-md-4">
             <h5>Recent comments</h5>
             <div class="mb-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque repudiandae commodi voluptas ipsa...</p>
-                <span class=" d-flex justify-content-between"><strong>By: Abhishek Sharma</strong><i>19 October 2023</i></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque repudiandae commodi voluptas ipsa...
+                </p>
+                <span class=" d-flex justify-content-between"><strong>By: Abhishek Sharma</strong><i>19 October
+                        2023</i></span>
             </div>
             <div class="mb-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque repudiandae commodi voluptas ipsa ab, aspernatur corrupti minus molestiae</p>
-                <span class=" d-flex justify-content-between"><strong>By: Abhishek Sharma</strong><i>19 October 2023</i></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque repudiandae commodi voluptas ipsa
+                    ab, aspernatur corrupti minus molestiae</p>
+                <span class=" d-flex justify-content-between"><strong>By: Abhishek Sharma</strong><i>19 October
+                        2023</i></span>
             </div>
             <div class="mb-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque repudiandae commodi voluptas ipsa...</p>
-                <span class=" d-flex justify-content-between"><strong>By: Abhishek Sharma</strong><i>19 October 2023</i></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque repudiandae commodi voluptas ipsa...
+                </p>
+                <span class=" d-flex justify-content-between"><strong>By: Abhishek Sharma</strong><i>19 October
+                        2023</i></span>
             </div>
             <div class="mb-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque repudiandae commodi voluptas ipsa...</p>
-                <span class=" d-flex justify-content-between"><strong>By: Abhishek Sharma</strong><i>19 October 2023</i></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque repudiandae commodi voluptas ipsa...
+                </p>
+                <span class=" d-flex justify-content-between"><strong>By: Abhishek Sharma</strong><i>19 October
+                        2023</i></span>
             </div>
             <h6 class="p-3">View All</h6>
         </div>
 
         <div class="d-flex  flex-wrap justify-content-between copy">
-           <p class="">&copy;copyright 2023 All Rights Reserved</p>
-           <ul class="d-flex flex-wrap m-0 gap-4">
-            <li>Terms and Conditions</li>
-            <li>Privacy Policy</li>
-            <li>Disclaimer</li>
-            <li>Advertisement</li>
-           </ul>
+            <p class="">&copy;copyright 2023 All Rights Reserved</p>
+            <ul class="d-flex flex-wrap m-0 gap-4">
+                <li>Terms and Conditions</li>
+                <li>Privacy Policy</li>
+                <li>Disclaimer</li>
+                <li>Advertisement</li>
+            </ul>
         </div>
     </footer>
+
+    <aside class="menuLateral">
+        <div>
+            <ul>
+                <li><a href="./login.html"><i class="bi bi-file-lock2-fill"></i></a>Login</li>
+            </ul>
+            <!-- Button trigger modal -->
+            <ul data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <li><i class="bi bi-chat-left-dots-fill"></i>Comentario</li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="row p-2 m-2">
+                    <h6 class="modal-title fs-5 col-11" id="exampleModalLabel">Dejanos un comentario.</h6>
+                    <button type="button" class="btn-close col-1" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form class="p-3" enctype="multipart/form-data">
+                    <input type="text" class="form-control m-1" name="nombre" placeholder="Nombre..." required>
+                    <label for="usu">Foto Usuario</label>
+                    <input type="file" class="form-control m-1" name="imagenUsu" id="usu">
+                    <textarea type="text" class="form-control m-1" name="comentario" placeholder="comentario..." required></textarea>
+
+                    <button type="submit" class="btn btn-outline-primary m-2">enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
 </body>
 

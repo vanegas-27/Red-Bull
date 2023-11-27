@@ -56,6 +56,11 @@ a:hover{
     color:$colorSombra;
 }
 
+.activP{
+    border-radius: 20px 20px 0px 0px;
+    background-color: $colorPrimary2;
+    box-shadow: 2px 2px 10px $colorPrimary2;
+}
 
 
 body{
@@ -79,10 +84,18 @@ header{
             padding: 8px 10px;
             font-weight: 300;
             cursor: pointer;
-            transition: all 0.40s ease;
+            transition: all 0.50s ease;
             border-bottom: 2px solid $colorPrimary2;
 
+            a{
+                color: $white;
+                font-weight: 300;
+                font-size: $txtP;
+            }
+
         }
+
+
 
         li:hover{
             border-radius: 5px 15px;
@@ -110,10 +123,21 @@ header{
 
 .container_main{
 
+    .carousel-item{
+        height: 100%;
+        object-fit: cover;
+
+        img{
+            height: 100% ;
+        }
+
+    }
+
     &_img_banner{
         position: relative;
         display: flex;
         height: 35rem;
+        overflow-x: hidden;
 
         img{
             border-radius: 20px;
@@ -124,7 +148,9 @@ header{
         .arrows{
             position: absolute;
             bottom: 15px;
-            right: 15px;
+            right: 32px;
+            justify-content: space-between;
+            width: 50px;
 
             i{
                 cursor: pointer;
@@ -133,6 +159,12 @@ header{
                 border-radius: 5px;
                 border: 1px solid $colorPrimary2;
                 transition: all .30s ease-in-out;
+            }
+
+            button{
+                justify-content: end ;
+                flex-direction: column;
+                margin-bottom: 20px;
             }
 
         }
@@ -148,6 +180,7 @@ header{
 
     &_notice{
         margin-bottom: 20px;
+        overflow:hidden;
 
         div:first-child{
             position: relative;
@@ -231,16 +264,16 @@ header{
         li{
             padding: 10px 15px;
             cursor: pointer;
-            transition: all .50s ease-in-out;
+            transition:  color 0.20s ease-in-out;
             font-size: $txtM;
             font-weight: 500;
         }
 
-        li:first-child,
+
+
         li:hover{
             background-color: $colorPrimary2;
             border-radius: 5px 5px 0px 0px;
-            transition: all .30s ease-in-out;
         }
 
         a{
@@ -257,6 +290,8 @@ header{
         img{
             object-fit: cover;
             border-radius: 20px;
+            height: 14em;
+            width: 100%;
         }
 
         span{
@@ -282,8 +317,8 @@ header{
         }
 
     }
-
 }
+
 
 .container_aside{
 
@@ -354,6 +389,7 @@ header{
     img{
         border-radius: 20px;
         object-fit: cover;
+
     }
 
 
@@ -372,6 +408,11 @@ header{
             display: table;
 
         }
+
+    }
+
+    .postImg{
+        max-height: 213px;
     }
 
     h4{
@@ -384,6 +425,7 @@ header{
     }
 
 }
+
 
 .banner{
     text-align: center;
@@ -414,8 +456,18 @@ footer{
 
     .notices{
 
+        article{
+            height: 20%;
+
+            figure{
+                min-height: 35%;
+            }
+        }
+
+
         .imgFooter img{
-            height: 100% ;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -447,6 +499,108 @@ footer{
 
     }
 }
+
+.menuLateral{
+    position: relative;
+
+    div{
+        position: fixed;
+        bottom: 30px;
+        left: -20px;
+
+        ul li{
+            width: 30px;
+            display: flex;
+            overflow: hidden;
+            gap: 6px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color:$white;
+            transition: color .30s ease-in;
+            cursor: pointer;
+
+        }
+
+        a{
+            font-size: 1.2rem;
+            font-weight: 800;
+            color:$white;
+            transition: color .30s ease-in;
+        }
+
+        ul li:hover a,
+        ul li:hover{
+            color: $colorPrimary2;
+        }
+
+        ul li:hover{
+            width: auto;
+            transform: scale(1.1);
+        }
+
+        i{
+            font-size: 1.7rem;
+            color: $white;
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+
+
+.modal-dialog .modal-content{
+    background-color: rgba(49, 49, 49, 0.726);
+    border-radius: 30px;
+    border: 2px solid $white;
+    box-shadow: 5px 3px 30px $black;
+
+    h6{
+        font-size: 2rem;
+        font-weight: 900;
+        color: white;
+    }
+
+    .btn-close{
+        transition: all 0.30s ease-in-out;
+        background-color: rgb(167, 163, 163);
+    }
+
+    .btn-close:hover{
+        background-color: red;
+        transform: rotate(91deg);
+    }
+
+    label{
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding-left: 10px;
+    }
+
+
+    textarea{
+        height: 150px;
+    }
+
+    input,textarea{
+        background-color: transparent;
+        color: $white;
+    }
+
+    input:hover,
+    textarea:hover{
+        background-color: rgb(167, 163, 163);
+    }
+
+    input:focus-within,
+    textarea:focus-within{
+        background-color: $colorPrimary;
+    }
+}
+
+
+
 
 @media (width <= 760px){
 

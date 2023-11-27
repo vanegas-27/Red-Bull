@@ -15,7 +15,7 @@ foreach($result as $i){
         <td>$i[0]</td>
         <td>$i[1]</td>
         <td>$i[2]</td>
-        <td>$i[3]</td>
+        <td><img src='../../../$i[3]' alt='foto subida del dashboard'></td>
         <td>$i[4]</td>
     </tr>
     \n

@@ -4,7 +4,6 @@ include("../database/persistencia.php");
 $bd = new Bd();
 
 
-
 $metodo = $_GET['metodo'];
 $tabla = $_GET['tabla'];
 
@@ -17,8 +16,6 @@ $nameImg = "imagen_".time()."_".$_FILES['imagen']['name'];
 
 $location = "./src/upload/$nameImg";
 
-$bd -> createTable("redbull",$tabla);
-
 $array = array($fecha,$encabezado,$location,$descripcion);
 
 if($metodo == "crear"){
@@ -27,9 +24,24 @@ if($metodo == "crear"){
     header("Location: ../interfaces/dashboard.php");
 
 }else if($metodo == "actualizar"){
-    echo"procesando...";
+
+    $id = $_GET['id'];
+
+    $array = array($fecha,$encabezado,$location,$descripcion,$id);
+
+    $bd -> update("redbull",$tabla,$array);
+
+    move_uploaded_file($urlImag,"../../upload/$nameImg");
+
+    header("Location: ../interfaces/dashboard.php");
+
 }else if($metodo == "eliminar"){
-    echo"procesando...";
+
+    $array = array("id",$_GET['id']);
+
+    $bd -> delete("redbull",$tabla,$array);
+
+    header("Location: ../interfaces/dashboard.php");
 }else{
     echo"error en el metodo";
     // header("Location: ../interfaces/dashboard.php");

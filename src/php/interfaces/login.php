@@ -13,6 +13,18 @@ if(isset($_POST['pass'])){
     $passExist  = $bd -> exists("redbull","credenciales",["password",$pass]);
 
     if($emailExist and $passExist){
+
+        $header = "From: davinsonvanegas4992@politecnicomayor.edu.co\n";
+        $header .= "Reply-To: juanarroyave@politecnicomayor.edu.co";
+        $header .= "X-Mailer: PHP/".phpversion();
+
+        $destinatario = "davidsonvanegas27@gmail.com";
+        $asunto = "Correo de prueba";
+        $mensaje = "Este es un correo de prueba";
+
+        // mail(email,asunto,mensaje,header)
+        mail($destinatario,$asunto,$mensaje,$header);
+
         header("Location: ./dashboard.php");
     }else{
         echo "<script>alert('Usuario o contraseña incorrecta');</script>";
@@ -77,16 +89,17 @@ if(isset($_POST['pass'])){
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400&display=swap" rel="stylesheet">
 
     <!--estilos propios-->
-    <link rel="stylesheet" type="text/css" href="../../../css/login/login.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/login/index.css">
 
 </head>
 <body>
     <form action="" method="post" class="row container m-auto">
-        <figure class="d-none d-md-block col-md-6">
-            <img src="../../../assets/images/usu.avif" alt="foto de login" class="img-fluid">
-        </figure>
+        <div>
+            <a href="../../../index.php"><i class="bi bi-x-square-fill btn btn-outline-primary" title="close"></i></a>
+        </div>
 
-        <div class="col-12 col-md-6">
+
+        <div class="col-12">
             <figure>
                 <img src="../../../assets/images/usu.png" alt="banner de login" class="img-fluid">
             </figure>

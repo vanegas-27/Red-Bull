@@ -15,7 +15,7 @@ class Bd{
 
 
     /**
-     * motodo constructor
+     * metodo constructor
      *
      * encargado de construir la clase de manera correcta al momento de hacer una instancia a la clase
      * esta puede o no tener parametros y es publica para poder acceder a ella.
@@ -127,24 +127,77 @@ class Bd{
 
 
     /**
-     * metodo createTable Productos
+     * metodo createTable
      *
-     * @param bd
-     * @param nombreTabla
      *
+     * esta se encarga de crear una tabla en especifico dependiendo los parametro que se les pase
+     * tambien verifica si la tabla esta o no creada antes de ejecutar, en caso de todo sali bien retorna un true
+     *
+     * @param bd -> redbull
+     * @param nombreTabla -> articulos
+     *
+     *
+     * ejm...
+     * $bd = new Bd();
+     *
+     * $result = createTable("redbull","nameTable");
+     *
+     * response: true or false
+     *
+     *
+     * @return bool
      */
 
-    public function createTable($bd,$nameTable){
+    public function createTable($bd,$nameTable,$category = null){
 
         $conn = $this-> conectionBd($bd);
 
-        $sql = "CREATE TABLE IF NOT EXISTS `$bd`.`$nameTable` (
+        if($category == null){
+            $sql = "CREATE TABLE IF NOT EXISTS `$bd`.`$nameTable` (
             `id` INT NOT NULL AUTO_INCREMENT,
             `fecha` DATE NOT NULL,
             `encabezado` VARCHAR(100) NOT NULL,
             `imagen` VARCHAR(500) NOT NULL,
             `descripcion` VARCHAR(255) NOT NULL,
             PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+        }else{
+            $sql = "CREATE TABLE IF NOT EXISTS `$bd`.`$nameTable` (
+            `id` INT NOT NULL AUTO_INCREMENT,
+            `fecha` DATE NOT NULL,
+            `encabezado` VARCHAR(100) NOT NULL,
+            `imagen` VARCHAR(500) NOT NULL,
+            `descripcion` VARCHAR(255) NOT NULL,
+            `categoria` VARCHAR(60) NOT NULL,
+            PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+        }
+
+        try{
+            mysqli_query($conn,$sql);
+            return true;
+        }catch(Exception $e){
+            echo("Error... ".$e);
+            return false;
+        }
+
+        $conn->close();
+    }
+
+
+
+
+
+    public function createTableC($bd,$nameTable){
+
+        $conn = $this-> conectionBd($bd);
+
+        $sql = "CREATE TABLE IF NOT EXISTS `$bd`.`$nameTable` (
+            `id` INT NOT NULL AUTO_INCREMENT ,
+            `nombre` VARCHAR(80) NOT NULL ,
+            `fecha` DATE NOT NULL ,
+            `imagen` VARCHAR(350) NOT NULL ,
+            `comentario` VARCHAR(255) NOT NULL ,
+            PRIMARY KEY  (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_bin;
+        ";
 
         try{
             mysqli_query($conn,$sql);
@@ -213,7 +266,17 @@ class Bd{
 
 
     /**
-     * metodo para insertar datos a una tabla
+     * metodo insertDate
+     *
+     * este nos sirve para poder insertar datos a una tabla en especifico
+     * esta resive la base de datos, el nombre de la tabla
+     * y una array con los valores de la tabla
+     *
+     *
+     * EJM...
+     * $bd = new Bd();
+     *
+     * $bd -> insertDate("redbull","articulos",[data...]);
      *
      * @param bd
      * @param nombreTabla
@@ -225,8 +288,33 @@ class Bd{
     public function insertDate($bd,$nameTable,$array){
 
         $conn = $this-> conectionBd($bd);
+        if(count($array) == 4){
+            $sql = "INSERT INTO `$nameTable` (`id`,`fecha`,`encabezado`, `imagen`, `descripcion`) VALUES ('NULL','$array[0]', '$array[1]', '$array[2]', '$array[3]');";
+        }else{
+            $sql = "INSERT INTO `$nameTable` (`id`,`fecha`,`encabezado`, `imagen`, `descripcion`,`categoria` ) VALUES ('NULL','$array[0]', '$array[1]', '$array[2]', '$array[3]','$array[4]');";
+        }
 
-        $sql = "INSERT INTO `$nameTable` (`id`,`fecha`,`encabezado`, `imagen`, `descripcion`) VALUES ('NULL','$array[0]', '$array[1]', '$array[2]', '$array[3]');";
+
+
+        try{
+            mysqli_query($conn,$sql);
+        }catch(Exception $e){
+            echo "ERROR... \n $sql";
+            return false;
+        }
+
+        $conn->close();
+
+    }
+
+
+    public function insertDateC($bd,$nameTable,$array){
+
+        $conn = $this-> conectionBd($bd);
+
+        $sql = "INSERT INTO `$nameTable` (`id`,`nombre`, `fecha`, `imagen`, `comentario`) VALUES ('NULL','$array[0]', '$array[1]', '$array[2]','$array[3]');";
+
+
 
         try{
             mysqli_query($conn,$sql);
@@ -241,8 +329,17 @@ class Bd{
 
 
 
+
     /**
-     * metodo para actualizar datos de una tabla
+     * metodo update
+     *
+     * este nos ayuda a actualizar una tabla especifica, a este se le pasa
+     * la bd el nombre de la tabla y el array con los valores a actualizar, si hay un error
+     * retorna un false
+     *
+     * ejm...
+     * $bd = new Bd();
+     * $bd -> update("redbull","articulos",[data...]);
      *
      * @param bd
      * @param nombreTabla
@@ -256,7 +353,7 @@ class Bd{
         $conn = $this-> conectionBd($bd);
 
         $sql = "UPDATE `$nameTable`
-        SET `fecha`='$array[0]',`encabezado`='$array[1]',`imagen`='$array[2]',`descripcion`='$array[3]', WHERE id = '$row[4]';";
+        SET `fecha`='$array[0]',`encabezado`='$array[1]',`imagen`='$array[2]',`descripcion`='$array[3]' WHERE id = '$array[4]' ;";
 
         try{
             mysqli_query($conn,$sql);
@@ -270,6 +367,26 @@ class Bd{
     }
 
 
+        /**
+     * metodo delete
+     *
+     * este nos sirve para poder eliminar datos a una tabla en especifico
+     * esta resive la base de datos, el nombre de la tabla
+     * y una array con la clave y el valor
+     *
+     *
+     * EJM...
+     * $bd = new Bd();
+     *
+     * $bd -> delete("redbull","articulos",[data...]);
+     *
+     * @param bd
+     * @param nombreTabla
+     * @param array
+     *
+     * @return void
+     *
+     */
     public function delete($bd,$nameTable,$array){
 
         $conn = $this->conectionBd($bd);
@@ -283,6 +400,24 @@ class Bd{
         }
 
         $conn -> close();
+
+    }
+
+
+    public function search($bd,$nameTable,$array){
+
+        $conn = $this->conectionBd($bd);
+
+        $sql = "SELECT * FROM $nameTable WHERE $array[0] = '$array[1]';";
+
+        try{
+            return mysqli_query($conn,$sql);
+        }catch(Exception $e){
+            echo("Error... ".$e);
+        }
+
+        $conn -> close();
+
 
     }
 
@@ -345,6 +480,10 @@ class Bd{
      * a esta se le pasa la base de datos y el nombre de la tabla y retorna un boolean
      * verdadero si hay datos, sino un false
      *
+     * ejm...
+     * $bd = new Bd();
+     * $bd -> contain("redbull","articulos");
+     *
      * @param BD
      * @param nameTable
      *
@@ -406,3 +545,12 @@ class Bd{
     }
 
 }
+
+$bd = new Bd();
+
+$bd -> createTable("redbull","banners");
+$bd -> createTable("redbull","articulos",1);
+$bd -> createTable("redbull","eventos");
+$bd -> createTable("redbull","logros");
+$bd -> createTable("redbull","post");
+$bd -> createTable("redbull","torneos");

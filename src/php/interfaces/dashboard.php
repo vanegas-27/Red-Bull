@@ -1,36 +1,3 @@
-<?php
-// include('../database/persistencia.php');
-
-// $lista = "";
-
-// if(isset($_GET['tabla'])){
-
-
-//     $bd = new Bd();
-
-//     $result = $bd -> read("redbull",$_POST['tabla']);
-
-//     foreach($result as $i){
-//         $lista .= "
-//         <tr>
-//             <td>$i[0]</td>
-//             <td>$i[1]</td>
-//             <td>$i[2]</td>
-//             <td>$i[3]</td>
-//             <td>$i[4]</td>
-//         </tr>
-//         \n
-//         ";
-//     }
-// }
-
-
-
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,6 +19,8 @@
 
 	<!-- link de jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="../../js/dashboard.js"></script>
 
 	<!--descripcion de pagina-->
 	<meta name="description"
@@ -94,7 +63,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400&display=swap" rel="stylesheet">
 
 	<!--estilos propios-->
-	<link rel="stylesheet" type="text/css" href="../../../css/dashboard/app.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/dashboard/dashboard.css">
 
 </head>
 
@@ -102,6 +71,7 @@
 
 	<header class="row container-fluid">
 		<!--- navegacion bootstrap-->
+
 		<nav class="navbar bg-body-tertiary ">
 
 			<div class="container-fluid ">
@@ -109,7 +79,7 @@
 				<figure class="col-md-6 d-flex justify-content-between container-fluid">
 					<img src="../../../assets/icons/redbullcom-logo.svg" type="img/svg" alt="Logo Red Bull" class="img-fluid"
 						loading="lazy">
-					<button class="navbar-toggler menHamn" type="button" data-bs-toggle="offcanvas"
+					<button class="navbar-toggler d-sm-none" type="button" data-bs-toggle="offcanvas"
 						data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
 						aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon d-block d-sm-none justify-content-between"><i
@@ -136,12 +106,12 @@
 
 						<div class="offcanvas-">
 							<ul class="flex-grow-1 pe-3 ">
-								<li data-op="op1">Banner Pincipal</li>
-								<li data-op="op2">Eventos</li>
-								<li data-op="op3">Articulos</li>
-								<li data-op="op4">Torneos</li>
-								<li data-op="op5">Logros</li>
-								<li data-op="op6">new Post</li>
+                            <li data-op="op1">banners</li>
+                            <li data-op="op2">eventos</li>
+                            <li data-op="op3">articulos</li>
+                            <li data-op="op4">torneos</li>
+                            <li data-op="op5">logros</li>
+                            <li data-op="op6">post</li>
 							</ul>
 						</div>
 
@@ -189,7 +159,7 @@
 				<img src="../../../assets/images/new-post.png" class="img-fluid">
 			</figure>
 
-            <form action=""  class="col-md-6" enctype="multipart/form-data">
+            <form action="" method="post" class="col-md-6" enctype="multipart/form-data">
 
                 <div class="form-floating mb-3">
                     <input type="date" class="form-control" name="fecha" id="fecha" placeholder="name@example.com" required>
@@ -211,22 +181,32 @@
                     <label for="descripcion">descripcion</label>
                 </div>
 
+                <div class="form-floating mb-3 categoria">
+                    <input list="categoria" class="form-control" name="categoria" ></input>
+                    <datalist id="categoria">
+                        <option>Freestyle</option>
+                        <option>Cars</option>
+                        <option>Deports</option>
+                    </datalist>
+                    <label for="categoria">categoria</label>
+                </div>
+
                 <div class="form-floating mb-3">
                     <input list="lista" class="form-control" required></input>
                     <datalist id="lista">
-                        <option>actualizar</option>
-                        <option>eliminar</option>
-                        <option>crear</option>
+                        <option class="tdEvent inactive">actualizar</option>
+                        <option class="tdEvent inactive">eliminar</option>
+                        <option class="ocul">crear</option>
                     </datalist>
                     <label for="lista">metodo de envio</label>
                 </div>
-                <button class="btn btn-primary"  name="send" >enviar</button>
+                <button class="btn btn-outline-primary"  name="send" >enviar</button>
 
             </form>
 		</section>
 
-        <table class="table lista">
-            <thead >
+        <table class="table lista container-fluid">
+            <thead>
                 <th scope="col">Id</th>
                 <th scope="col">Fecha</th>
                 <th scope="col">Encabezado</th>
@@ -237,72 +217,5 @@
             </tbody>
         </table>
 	</main>
-
-
-	<script>
-		$(document).ready(function ($) {
-
-            $('figure').slideUp();
-
-            let value = null;
-            let metodo = null;
-
-
-            $('input[list=lista]').change(() => {
-                metodo = $("input[list=lista]").val();
-            })
-
-
-            $('button.btn').click(function(){
-
-                if(metodo == null || value == null){
-                    alert('faltan datos por selecionar')
-                    return;
-                }else{
-                    $('form').attr('action',`../procesos/${value}.php?tabla=${value}&metodo=${metodo}`);
-                }
-
-
-
-            });
-
-
-
-			$('ul li').click(function () {
-
-                let select = $(this).data('op');
-
-                value = $(this).html();
-
-                $.ajax({
-                    url : "../procesos/renderTable.php",
-                    type: "POST",
-                    async : true,
-                    data : {
-                        'tabla' : value
-                    },
-
-                    beforeSend : function(){
-                        console.log('cargando...');
-                    },
-
-                    success : function(data){
-                        $('tbody').html(data);
-                    }
-                });
-
-
-
-				$('figure').not('.' + select).slideUp();
-
-				$('.' + select).slideDown();
-
-            });
-
-
-        });
-
-	</script>
 </body>
-
 </html>

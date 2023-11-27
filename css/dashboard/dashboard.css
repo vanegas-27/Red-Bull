@@ -1,0 +1,76 @@
+body {
+  background-color: #001c39;
+}
+
+* {
+  color: white;
+}
+
+table img {
+  width: 100px;
+}
+
+.inactive {
+  display: none;
+}
+
+label {
+  color: black;
+}
+
+header {
+  align-items: center;
+  position: relative;
+}
+header ul {
+  padding: 0px;
+  font-family: "Bull VF", Helvetica, sans-serif;
+  text-align: center;
+}
+header ul li {
+  margin: 5px auto;
+  display: table;
+  font-size: 1.2rem;
+  padding: 8px 10px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border-bottom: 2px solid rgb(10, 187, 231);
+  color: white;
+}
+header ul li:hover {
+  border-radius: 5px 15px;
+  transform: scale(1.1);
+  background-color: rgb(10, 93, 175);
+  translate: 10px 0px;
+}
+
+form {
+  background-color: rgb(236, 234, 234);
+  padding: 40px 0px;
+  border-radius: 10px;
+}
+
+form figure:first-child {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+form .form-control {
+  background-color: transparent;
+  border: 1px solid rgba(21, 154, 187, 0.966);
+}
+
+form .form-control:focus-visible {
+  background-color: #001c39;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  box-shadow: 1px 2px 10px #001c39;
+  outline: none;
+  border: none;
+}
+
+form .form-control:focus-visible ~ label {
+  font-size: 1.2rem;
+  color: white;
+}/*# sourceMappingURL=dashboard.css.map */
