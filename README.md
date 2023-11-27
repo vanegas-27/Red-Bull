@@ -100,7 +100,7 @@ asi que no tienes de que preocuparte en la gestion de la bd,mas si en la flutuac
 
 ## mauqetacion pagina
 
-para ver la maquetacion dirigirse a la ruta... localhost/red-bull/public/index.html
+para ver la maquetacion dirigirse a la ruta... https://vanegas-27.github.io/Red-Bull/public/index.html
 
 
 # - inicio proyecto.
