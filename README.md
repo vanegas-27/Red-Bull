@@ -195,7 +195,7 @@ en este archivo marco o identifico donde voy a renderizar los componentes y que 
 - prosigo con la creacion del login ya que intentare crear mi propio dashBoard donde pueda crear, eliminar, editar lo componentes que se reflejan en la pagina Red Bull. para eso creare solo dos usuarios que puedan entrar al dashBoard, debido a las necesidades creo un nuevo directorio en php llamado dashBoard y dentro de este un script de php llamado login y otro dashBoard
 
 -> davinson vanegas : 
-    correo: davidsonvanegas27@gmail.com
+    correo: david.........
     password : Davidson*
 
 -> juan arroyave : 
